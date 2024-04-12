@@ -262,6 +262,18 @@ justify-content: center;
   object-fit: cover; /* Fill the container while preserving aspect ratio */
 }
 
+.zoomed-image-text {
+  position: absolute; /* Position the text relative to its containing element */
+  text-align: right;
+  width: 30%;
+  top: 30px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the left position as needed */
+  font-family: Arial, sans-serif; /* Specify the font family */
+  font-size: 20px; /* Specify the font size */
+  color: white; /* Specify the text color */
+  background-color: rgba(0, 0, 0, 0.6); /* Add background color with opacity */
+  padding: 10px; /* Add padding to provide space around the text */
+}
 
 
 #back-to-wheel {

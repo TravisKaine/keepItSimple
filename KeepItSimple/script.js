@@ -31,7 +31,7 @@ const handleOnMove = e => {
 }
 
 
-function zoomImage(imageSrc) {
+function zoomImage(imageSrc, text) {
   const zoomedImage = document.getElementById('zoomed-image');
   zoomedImage.src = imageSrc;
 
@@ -45,17 +45,19 @@ function zoomImage(imageSrc) {
   const photoWheel = document.getElementById('photo-wheel');
   photoWheel.style.display = 'none';
 
+  // Create a div for the zoomed image text
   const zoomedText = document.createElement('div');
-    zoomedText.classList.add('zoomed-image-text');
+  zoomedText.classList.add('zoomed-image-text');
+  zoomedText.textContent = text; // Set the text content
 
-    // Check if there is already a text element, if yes, remove it
-    const existingTextElement = document.querySelector('.zoomed-image-text');
-    if (existingTextElement) {
-        existingTextElement.remove();
-    }
+  // Check if there is already a text element, if yes, remove it
+  const existingTextElement = document.querySelector('.zoomed-image-text');
+  if (existingTextElement) {
+    existingTextElement.remove();
+  }
 
-    // Append the text to the zoomed image container
-    zoomedContainer.appendChild(zoomedText);
+  // Append the text to the zoomed image container
+  zoomedContainer.appendChild(zoomedText);
 }
 
 function backToWheel() {
